@@ -9,6 +9,8 @@ $lang['Centoswebpanel.module_row'] = 'Server';
 $lang['Centoswebpanel.module_row_plural'] = 'Servers';
 $lang['Centoswebpanel.module_group'] = 'Server Group';
 
+$lang['Centoswebpanel.back_to_manage'] = 'Back';
+
 // Module management
 $lang['Centoswebpanel.add_module_row'] = 'Add Server';
 $lang['Centoswebpanel.add_module_group'] = 'Add Server Group';
