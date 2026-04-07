@@ -38,6 +38,11 @@ class CentoswebpanelApi
     private $use_ssl;
 
     /**
+     * @var Blesta\Core\ServiceProviders\Logger Container logger
+     */
+    private $logger;
+
+    /**
      * Initializes the class.
      *
      * @param mixed $hostname The CentOS WebPanel hostname or IP Address

@@ -27,22 +27,20 @@
                 $this->Form->create(
                     $this->Html->safe(
                         'https://' .
-                            (isset($module_row->meta->host_name) ? $module_row->meta->host_name : null) .
+                            ($module_row->meta->host_name ?? null) .
                             ':' .
-                            (isset($module_row->meta->login_port)
-                                ? $module_row->meta->login_port
-                                : $this->_('Centoswebpanel.row_meta.default_login_port', true)) .
+                            ($module_row->meta->login_port ?? $this->_('Centoswebpanel.row_meta.default_login_port', true)) .
                             '/login/index.php',
                     ),
                     ['target' => '_blank'],
                 );
                 $this->Form->fieldHidden(
                     'username',
-                    isset($service_fields->centoswebpanel_username) ? $service_fields->centoswebpanel_username : null,
+                    $service_fields->centoswebpanel_username ?? null,
                 );
                 $this->Form->fieldHidden(
                     'password',
-                    isset($service_fields->centoswebpanel_password) ? $service_fields->centoswebpanel_password : null,
+                    $service_fields->centoswebpanel_password ?? null,
                 );
                 $this->Form->fieldHidden('commit', 'Login');
                 ?>
